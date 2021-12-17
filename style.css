@@ -49,6 +49,12 @@
     justify-content: flex-end;
 }
 
+.flex-end-center{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
 .space-between{
     display: flex;
     justify-content: space-between;
@@ -146,7 +152,11 @@ cursor: pointer;
    background-color: #f5edff;
    cursor: pointer;
    transition-duration: .25s;
-   color: #9356dc;
+   color: black;
+}
+
+.list-style:hover i{
+    color:#9356dc ;
 }
 
 .margin1{
@@ -239,7 +249,7 @@ cursor: pointer;
  
 }
 
-/*main*/
+/*menu-main*/
 
 .main-margin{
     border-top: 0.1px solid black;
@@ -255,4 +265,7 @@ cursor: pointer;
     border-radius: 30px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     margin: 10px;
+    padding:5px 20px 10px 10px;
+    display: flex;
+    justify-content: space-between;
 }
