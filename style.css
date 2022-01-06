@@ -211,15 +211,23 @@ cursor: pointer;
    
 }
 
+.restaurant-card i:hover{
+    background: linear-gradient(#9356DC, #FF79DA);
+    background-clip: border-box;
+    color: #fff;
+    font-weight: 600;
+    transform: scale(1.2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
-
-
-
-.card-heart:hover{
-    
-    background-color: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
-    cursor: pointer;
-    transition-duration: .25s;
+.restaurant-card-new{
+    background-color: #99e2d0;
+    border-radius: 5px;
+    color: #1f997c;
+    padding: .5em;
+    position: absolute;
+    z-index: 2;
 }
 
 
@@ -278,6 +286,17 @@ cursor: pointer;
     transform: scale(1.03);
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
+
+.main-margin i:hover{
+    background: linear-gradient(#9356DC, #FF79DA);
+    background-clip: border-box;
+    color: #fff;
+    font-weight: 600;
+    transform: scale(1.2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 
 /*loader*/
 
