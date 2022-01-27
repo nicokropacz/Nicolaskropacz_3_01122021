@@ -81,6 +81,17 @@
     font-size: bold;
 }
 
+.text-overflow{
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.padding-top{
+    padding-top: 10px;
+}
+
+
 /*header*/
 
 .shadow{
@@ -225,6 +236,14 @@ cursor: pointer;
 }
 
 .restaurant-card i:hover{
+   /* background: linear-gradient(#9356DC, #FF79DA);
+    background-clip: border-box;
+    color: #fff;
+    font-weight: 600;
+    transform: scale(1.2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    */
     background: linear-gradient(#9356DC, #FF79DA);
     background-clip: border-box;
     color: #fff;
@@ -232,6 +251,7 @@ cursor: pointer;
     transform: scale(1.2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    transition: transform 3s;
 }
 
 .restaurant-card-new{
@@ -260,7 +280,7 @@ cursor: pointer;
 /*header-menu*/
 
 .margin-arrow-menu{
-    margin-left: 20px;
+    margin-left: -50px;
     margin-right: 50px;
 }
 
@@ -288,10 +308,15 @@ cursor: pointer;
     background-color: #F2F2F2;
     border-radius: 30px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    margin: 10px;
+    margin: 30px;
+    /*
     padding:5px 20px 10px 10px;
+    */
     display: flex;
     justify-content: space-between;
+    white-space: nowrap;
+
+   
 }
 
 .list-style-menu:hover{
@@ -300,7 +325,7 @@ cursor: pointer;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-.main-margin i:hover{
+.main-margin .card-heart:hover{
     background: linear-gradient(#9356DC, #FF79DA);
     background-clip: border-box;
     color: #fff;
@@ -308,6 +333,7 @@ cursor: pointer;
     transform: scale(1.2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    transition: transform 3s;
 }
 
 .title-menu-underline{
@@ -316,6 +342,20 @@ cursor: pointer;
     padding-bottom: 5px;
 }
 
+.price{
+    padding: 38px 15px 0 15px;
+    font-weight: bold;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+  }
+
+.menu-text{
+    padding: 5px 10px;
+    overflow: hidden;
+    
+}
 
 /*loader*/
 
@@ -359,3 +399,96 @@ cursor: pointer;
   }
 
 
+/*animation menu*/
+
+.check{
+    position: relative;
+    background-color: #99E2D0;
+    border-radius: 0px 20px 20px 0px;
+    overflow: hidden;
+    width: 0px;
+    opacity: 0;    
+}
+/*
+.check::before{
+    content: '';
+    position: absolute;
+    left: 200px;
+    width: 100%;
+    height: 100%;
+    background: #99E2D0;
+    transition: all .5s;
+    z-index: -1;
+}
+
+
+.list-style-menu:hover .check::before{
+    left:0;
+    
+}
+*/
+
+
+ .circle-check{
+    position: relative;
+    font-size: 1.5rem;
+    color: white;
+    opacity: 1;
+    top: 35%;
+    right: -35%;
+    z-index: 0;
+
+  
+}
+
+
+.list-style-menu:hover .check{
+    
+    transition: 0.5s ease-in-out forwards;
+    transform: translateX(0px);
+    animation: menuAnim 0.5s;
+    opacity: 1;
+    width: 6rem;
+    transition: all .5s;
+}
+
+.list-style-menu:hover .circle-check{
+    animation: rotate .5s;
+}
+/*
+.list-style-menu:hover .price{
+    display: flex;
+    align-items: center;
+    transform: translateX(0);
+}
+*/
+
+
+
+@keyframes menuAnim {
+    0%{
+        opacity: 0;
+        /*
+        transform:width(0px) ;
+        */
+
+    }
+
+    100%{
+        opacity: 1;
+        /*
+        transform: width(100px);
+        */
+        
+    }
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
